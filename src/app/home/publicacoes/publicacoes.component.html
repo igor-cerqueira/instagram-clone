@@ -1,0 +1,24 @@
+<div class="row" *ngFor="let item of publicacoes"  >
+  <div class="col d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text"><strong>{{ item.nome_usuario }}</strong></p>
+      </div>
+
+      <img class="card-img" [src]="item.url_imagem || ''" />
+
+      <div class="card-body">
+        <p class="card-text">
+          <strong>{{ item.nome_usuario }}</strong> {{ item.legenda }}
+        </p>
+
+        <hr />
+        <input
+          type="text"
+          class="form-control comentario"
+          placeholder="Adicione um comentário..."
+        />
+      </div>
+    </div>
+  </div>
+</div>
